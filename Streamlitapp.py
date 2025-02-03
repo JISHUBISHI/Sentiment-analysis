@@ -22,8 +22,10 @@ with open('model.pkl', 'rb') as f:
 
 
 if user_tweet:
-    if user_tweet_prediction == 1:
-        sentiment = 'Positive'
-    else:
-        sentiment = 'Negative'
+    if user_tweet_prediction == "Neutral":
+        sentiment = 'Your sentient is Neutral'
+    elif user_tweet_prediction == "Positive":
+        sentiment = 'Your sentient is Positive'
+    else :
+        sentiment = 'Your sentient is Negative'
     st.write(f'Predicted Sentiment: {sentiment}')
